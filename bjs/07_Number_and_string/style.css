@@ -7,3 +7,18 @@
     text-align: end;
     font-size: x-large;
 }
+
+.card-body {
+    background-color: rgba(22, 21, 21, 0.925);
+    border-radius: 5px;
+}
+
+.col {
+    margin: 1px;
+}
+
+.btn-outline-danger {
+    color: #dddddd;
+    background-color: #dc3545;;
+    border-color: #dc3545;
+}

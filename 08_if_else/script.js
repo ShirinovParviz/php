@@ -43,4 +43,3 @@ document.getElementById('btnEqual').addEventListener('click', function () {
         gameRun = false;
     }
 })
-
