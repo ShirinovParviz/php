@@ -61,8 +61,6 @@ document.getElementById('btnLess').addEventListener('click', function () {
         }
 
 
-
-
     }
 });
 
@@ -74,4 +72,27 @@ document.getElementById('btnEqual').addEventListener('click', function () {
     }
 })
 
-console.log(gameRun);
+
+document.querySelector('#btnRetry').addEventListener('click', function () {
+    minValue = 0;
+    maxValue = 100;
+    orderNumber = 0;    
+
+    alert(`Загадайте любое целое число от ${minValue} до ${maxValue}, а я его угадаю.`);
+
+    answerNumber = parseInt(Math.floor((minValue + maxValue) / 2));
+    orderNumber = 1;
+    const phraseRandom = Math.round(Math.random() * 3);
+    const answerPhrase = (phraseRandom === 1) ?
+    `Ваще изи! Это : ${answerNumber } Угадал? \n\u{1F60E}` :
+    `Это число! ${answerNumber } ? \n\u{1F914}` ;
+        answerField.innerText = answerPhrase;
+    gameRun = true;
+
+    minValue = parseInt(prompt('Минимальное знание числа для игры', '0'));
+    minValue = (minValue < 0) ? '0' : minValue;
+    
+
+    maxValue = parseInt(prompt('Максимальное знание числа для игры', '100'));
+    maxValue = (maxValue >= 100) ? '100' : maxValue;
+})
