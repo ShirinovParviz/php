@@ -39,6 +39,8 @@ document.getElementById('btnOver').addEventListener('click', function () {
     }
 });
 
+
+
 document.getElementById('btnLess').addEventListener('click', function () {
     if (gameRun) {
         if (minValue === maxValue) {
@@ -51,7 +53,7 @@ document.getElementById('btnLess').addEventListener('click', function () {
             gameRun = false;
         } else {
             minValue = answerNumber + 1;
-            answerNumber = Math.floor((/* maxValue - minValue */ minValue + maxValue) / 2);
+            answerNumber = Math.floor((maxValue - minValue) / 2);
             orderNumber++;
             
             orderNumberField.innerText = orderNumber;
